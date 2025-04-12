@@ -1,0 +1,216 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+/* ========= NAV ========= */
+.nav-container {
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  height: auto;
+  background-color: #2c2f36;
+  padding: 1rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.site-name {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+/* ========= JOGO ========= */
+.gameCanvas {
+  width: 48vw;  
+  height: calc(48vw * 0.625);  
+  max-width: 960px;
+  max-height: 600px;
+  border: none;
+  border-radius: 15px;
+}
+
+/* ========= CONTEÚDO ========= */
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+/* ========= Programação ========= */
+.container-programming {
+  display: flex;
+  height: 45rem;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  margin-right: 2rem;
+}
+
+#blocklyDiv {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 12px;
+  background-color: #FFF;
+  padding: 10px;
+
+     
+  position: relative;
+  z-index: 10;
+}
+
+/* Introdução */
+.container-introduce {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  background-color: #0f1524;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Botões */
+.buttons {
+  width: 10rem;
+  height: auto;
+  padding: 1.1rem;
+  border: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;    
+  background-repeat: no-repeat; 
+  background-position: center;  
+  transition: filter 0.3s ease;
+  image-rendering: pixelated;  
+  color: white;
+  background-color: #f5f5f5;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+
+#execute {
+  background-image: url('imagens/btn_run.png');
+}
+#reset {
+  background-image: url('imagens/brn_reset.png');
+}
+
+.buttons:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition-duration: 600ms;
+}
+
+/* ========= FOOTER ========= */
+.footer {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 20px 10px;
+  text-align: center;
+  border-top: 2px solid #ddd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+#logoMaior {
+  height: 60px;
+}
+.footer-logo:hover {
+  transform: scale(1.1);
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ========= RESPONSIVO ========= */
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-programming {
+    width: 90%;
+  }
+
+  .gameCanvas {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-name {
+    font-size: 16px;
+  }
+
+  .buttons {
+    width: 100%;
+    font-size: 16px;
+    padding: 1rem;
+  }
+
+  .btn-container {
+    justify-content: center;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+
+  .nav-container {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
